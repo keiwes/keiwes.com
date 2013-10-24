@@ -22,6 +22,7 @@ h1 {
 	font-size: 100px;
 	font-family: Oswald, Helvetica, sans-serif;
 	font-weight: 300;
+	text-shadow: 0.02em 0.02em #DDD;
 	color: #00a5c2;
 	margin-top: 0;
 }
