@@ -9,130 +9,123 @@
     <meta name="keywords" content="Keith Weston, UX, User Experience, Louisville, Kentucky">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
     <link rel="shortcut icon" href="images/favicon.ico" />
-    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300|Open+Sans+Condensed:300|Oswald:300' rel='stylesheet' type='text/css'>
-    <script type="text/javascript" charset="utf-8" src="scripts/jquery.js"></script>
-    <script type="text/javascript" charset="utf-8" src="scripts/jquery.nav.js"></script>
-    <script type="text/javascript" charset="utf-8" src="scripts/jquery.scrollTo.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/jquery.nav.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/jquery.scrollTo.js"></script>
 </head>
 
 <body>
 
     <header>
-        <div class="container">
+        <div class="large-container">
             <a href="index.html">
-                <img id="kw-logo" src="images/KeithWeston.png" title="Keith Weston" alt="Keith Weston Logo">
+                <img id="kw-logo" src="images/KeithWestonLogo.png" title="Keith Weston" alt="Keith Weston Logo">
             </a>
             <ul id="nav">
                 <li class="current">
                     <li>
-                        <a href="#me">About</a>
+                        <a href="#tagline">About</a>
                     </li>
-                    <li>
-                        <a href="#work">Work</a>
-                    </li>
-                    <li>
-                        <a href="#contact">Contact</a>
-                    </li>
+                </li>
+                <li>
+                    <a href="#work">Work</a>
+                </li>
+                <li>
+                    <a href="#contact">Contact</a>
+                </li>
             </ul>
             <!--ul nav-->
         </div>
-        <!--div container-->
+        <!--div large-container-->
     </header>
 
-    <div id="main">
-        <div id="tagline">
-            <div class="container">
-                <h1>Keith Weston</h1>
-                <h2>User Experience Designer</h2>
-            </div>
-            <!--div container-->
-        </div>
-        <!--div tagline-->
 
-        <div id="me">
-            <div class="container">
-                <h3>
-                    <span>About Me</span>
-                </h3>
-                <img id="profileImage" src="images/KeithProfile.png" title="Keith Weston" alt="Keith Weston Picture">
-                <p>Keith...</p>
-                <p>is a UX Designer in Louisville, Kentucky,</p>
-                <p>has a background in Computer Engineering, Information Systems, and Psychology,</p>
-                <p>loves learning about new technologies and how people interact with technology to make life better,</p>
-                <p>became a father in December 2012 and loves it everyday.</p>
-            </div>
-            <!--div container-->
+    <div id="tagline">
+        <div class="large-container">
+            <img id=profileImage src="images/KeithWestonProfile.png" title="Keith Weston" alt="Keith Weston">
+            <h1>Keith Weston</h1>
+            <h2>User Experience Designer</h2>
         </div>
-        <!--div me-->
-
-        <div id="work">
-            <div class="container">
-                <h3>Work</h3>
-                <div id="axure">
-                    <iframe id="axure-video" src="http://www.youtube.com/embed/J2BDVM6Qw5s" frameborder="1" allowfullscreen></iframe>
-                    <h4>Axure</h4>
-                    <p>I have trained and supported development teams with Axure and the best practices of rapid prototyping.</p>
-                    <p>Training Video I created for teams to reference: "Getting Started with Axure"</p>
-                </div>
-                <!--div axure-->
-                <div id="playlister">
-                    <img id="playlister-image" src="images/Playlister.png" title="Playlister" alt="Playlister">
-                    <h4>Playlister</h4>
-                    <p>Playlister is a concept application that would allow multiple Spotify members to listen to the same playlist. Members can suggest songs that are available on Spotify, and a voting system would be in place that would affect the order in which the songs are played. Social features, such as chat and share on social networks, would also be available for a more engaging experience.</p>
-                </div>
-                <!--div playlister-->
-                <div id="my-work">
-                    <img id="my-work-image" src="images/MyWork.png" title="My Work" alt="My Work">
-                    <h4>My Work</h4>
-                    <p>My Work is an employee dashboard designed to increase productivity by providing tools in one location. This dashboard was built in SharePoint as an extension to the My Site functionality. Company web parts and external website web parts were available and customizable. A notification bar was included to alert employees when they needed to perform a work action, or when they received private messages. Brand colors were used.</p>
-                </div>
-                <!--my-work-->
-                <div id="ux-class">
-                    <img id="ux-class-image" src="images/UXClass.png" title="UX Class" alt="UX Class">
-                    <h4>UX Class</h4>
-                    <p>I taught User Experience classes to incoming IT interns. I reviewed the UX field and careers, common web practices, the psychology behind how we use the web, different approaches and tools for wireframing and prototyping, qualitative usability testing, and the company brand. The class was usually about 3 hours in length.</p>
-                </div>
-                <!--div ux-class-->
-                <div id="other">
-                    <h4>Other</h4>
-                    <p>If you would like to see my full portfolio, please contact me.</p>
-                </div>
-                <!--div other-->
-            </div>
-            <!--div container-->
-        </div>
-        <!--div work-->
-
-        <div id="contact">
-            <div class="container">
-                <h3>
-                    <span>Contact</span>
-                </h3>
-                <a href="mailto:keith@keiwes.com">
-                    <img src="images/email.png" class="contactIcon" title="Email" alt="email" />
-                </a>
-                <a href="https://twitter.com/keiwes">
-                    <img src="images/twitter.png" class="contactIcon" title="Twitter" alt="twitter" />
-                </a>
-                <a href="http://www.linkedin.com/in/keiwes">
-                    <img src="images/linkedin.png" class="contactIcon" title="Linked In" alt="linked in" />
-                </a>
-            </div>
-            <!--div container-->
-        </div>
-        <!--div contact-->
+        <!--div large-container-->
     </div>
-    <!--div main-->
+    <!--div tagline-->
+
+    <div id="about">
+        <div class="large-container">
+            <p>Hi. I’m Keith, from Louisville, Kentucky. I’m passionate about crafting user experiences to help make life better for people. I love learning about technology, design, and the web. My educational background is in Information Systems, Computer Science, and Psychology.</p>
+            <p>On a personal level, I became a father in 2012, I enjoy board sports such as longboarding and snowboarding, and coffee is my creative fuel.
+            </p>
+        </div>
+        <!--div large-container-->
+    </div>
+    <!--div me-->
+
+    <div id="work">
+        <div class="medium-container">
+            <h3>Work</h3>
+            <h5>(and experience)</h5>
+            <div class="work-item">
+                <h4>Axure</h4>
+                <iframe id="axure-video" src="http://www.youtube.com/embed/J2BDVM6Qw5s" frameborder="1" allowfullscreen></iframe>
+                <p>I have trained and supported development teams with Axure and the best practices of wireframing and rapid prototyping. "Getting Started with Axure" is an instructional video that teaches the major features of the application in less than 30 minutes.
+                    <a href="https://www.youtube.com/watch?v=J2BDVM6Qw5s">See it on YouTube</a>
+                </p>
+            </div>
+            <!--div axure-->
+            <div class="work-item">
+                <h4>My Work</h4>
+                <img id="my-work-image" src="images/MyWork.png" title="My Work" alt="My Work">
+                <p>My Work is an employee dashboard designed to increase productivity by providing tools in one location. This dashboard was built in SharePoint as an extension to the My Site functionality. Company web parts and external website web parts were available and customizable. A notification bar was included to alert employees when they needed to perform a work action, or when they received private messages. Brand colors were used.</p>
+            </div>
+            <!--my-work-->
+            <div class="work-item">
+                <h4>Singing Colors</h4>
+                <img id="singing-colors" src="images/SingingColors.png" title="Singing Colors" alt="Singing Colors">
+                <p>Singing Colors is a simple, educational Android app for toddlers and young children to help with learning colors. When a color is selected, it animates to fill the screen, spells the color, and the color is sung as part of the musical scale. I created Singing Colors from concept to publication to learn more about Android design and development.
+                    <a href="https://play.google.com/store/apps/details?id=com.keiwes.singingcolors">See it on Google Play</a>
+                </p>
+            </div>
+            <div class="work-item">
+                <h4>UX Class</h4>
+                <img id="ux-class-image" src="images/UXClass.png" title="UX Class" alt="UX Class">
+                <p>I taught user experience classes to incoming IT interns. I reviewed the UX field and careers, common web practices, the psychology behind how we use the web, different approaches and tools for wireframing and prototyping, qualitative usability testing, and the company brand.</p>
+            </div>
+            <!--div ux-class-->
+            <div class="center-text">
+                <p>If you would like to see my full portfolio, please contact me.</p>
+            </div>
+            <!--div center-text-->
+        </div>
+        <!--div large-container-->
+    </div>
+    <!--div work-->
+
+    <div id="contact">
+        <div class="large-container">
+            <h3>
+                <span>Contact</span>
+            </h3>
+            <a href="mailto:keith@keiwes.com">
+                <img src="images/email.png" class="contactIcon" title="Email" alt="email" />
+            </a>
+            <a href="https://twitter.com/keiwes">
+                <img src="images/twitter.png" class="contactIcon" title="Twitter" alt="twitter" />
+            </a>
+            <a href="http://www.linkedin.com/in/keiwes">
+                <img src="images/linkedin.png" class="contactIcon" title="Linked In" alt="linked in" />
+            </a>
+        </div>
+        <!--div large-container-->
+    </div>
+    <!--div contact-->
 
     <footer>
-        <div class="container">
-            <div id="copyright">
-                <p>Keith Weston | 2014</p>
-            </div>
-            <!--div copyright-->
+        <div id="copyright">
+            <p>Keith Weston | 2014</p>
         </div>
-        <!--div container-->
+        <!--div copyright-->
     </footer>
 
     <!--One Page Nav-->
