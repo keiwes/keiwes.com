@@ -75,6 +75,80 @@ a {
     margin: 0 auto;
     padding: 0;
 }
+/*----------Animation----------*/
+
+@-webkit-keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(-20px);
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(-20px);
+        -ms-transform: translateY(-20px);
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+.fadeInDown {
+    -webkit-animation-delay: 0.7s;
+    animation-delay: 0.7s;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-name: fadeInDown;
+    animation-name: fadeInDown;
+}
+@-webkit-keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(20px);
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(20px);
+        -ms-transform: translateY(20px);
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+.fadeInUp {
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-name: fadeInUp;
+    animation-name: fadeInUp;
+}
 /*----------Header----------*/
 
 header {
@@ -90,6 +164,7 @@ header {
     border-bottom: 2px;
     border-bottom-color: #222;
     border-bottom-style: solid;
+    z-index: 1;
 }
 #kw-logo {
     width: 100px;
@@ -133,7 +208,7 @@ header {
 #tagline {
     text-align: center;
     height: 700px;
-    background-image: url('../images/sketchBackground.png');
+    background-image: url('../images/sketchBackground.jpg');
     no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -268,8 +343,8 @@ footer {
         height: 50px;
     }
     #kw-logo {
-        width: 75px;
-        height: 75px;
+        width: 52px;
+        height: 52px;
     }
     #nav {
         padding: 0;
