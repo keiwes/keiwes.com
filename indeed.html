@@ -3,9 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="noindex, nofollow">
-    <meta name="googlebot" content="noindex, nofollow">
-    <meta name="BingBOT" content="noindex, nofollow">
     <title>Keith Weston - Indeed</title>
     <!-- Prevent flash of white in dark mode -->
     <script>
@@ -20,11 +17,11 @@
         })();
     </script>
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="../images/favicon.png">
-    <link rel="apple-touch-icon" href="../images/favicon.png">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="apple-touch-icon" href="images/favicon.png">
     <!-- Preload critical hero image -->
-    <link rel="preload" as="image" href="../images/indeed/indeed-header.png" fetchpriority="high">
-    <link rel="stylesheet" href="../styles.css">
+    <link rel="preload" as="image" href="images/indeed/indeed-header.png" fetchpriority="high">
+    <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -40,7 +37,7 @@
     <!-- Mobile Drawer -->
     <div class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
         <nav class="mobile-navigation">
-            <a href="index.html#work" class="nav-link" tabindex="-1">Work</a>
+            <a href="#work" class="nav-link" tabindex="-1">Work</a>
             <a href="about.html" class="nav-link" tabindex="-1">About</a>
             <a href="Keith-Weston-Resume.pdf" target="_blank" rel="noopener noreferrer" class="nav-link" tabindex="-1">Resume</a>
             <a href="https://www.linkedin.com/in/keiwes/" target="_blank" rel="noopener noreferrer" class="nav-link" tabindex="-1">LinkedIn</a>
@@ -66,7 +63,7 @@
         <aside class="sidebar">
             <div class="profile-section">
                 <div class="profile-picture-wrapper">
-                    <img src="../images/profile.png" alt="Keith Weston" class="profile-picture" id="profilePicture" decoding="async" fetchpriority="high" width="120" height="120">
+                    <img src="images/profile.png" alt="Keith Weston" class="profile-picture" id="profilePicture" decoding="async" fetchpriority="high" width="120" height="120">
                 </div>
                 <h1 class="name">Keith Weston</h1>
                 <p class="title">User Experience Designer in Austin, TX</p>
@@ -74,7 +71,7 @@
             </div>
             
             <nav class="navigation">
-                <a href="index.html#work" class="nav-link">Work</a>
+                <a href="#work" class="nav-link">Work</a>
                 <a href="about.html" class="nav-link">About</a>
                 <a href="Keith-Weston-Resume.pdf" target="_blank" rel="noopener noreferrer" class="nav-link">Resume</a>
                 <a href="https://www.linkedin.com/in/keiwes/" target="_blank" rel="noopener noreferrer" class="nav-link">LinkedIn</a>
@@ -97,7 +94,7 @@
             <!-- Mobile Profile Section -->
             <div class="mobile-profile-section">
                 <div class="profile-picture-wrapper">
-                    <img src="../images/profile.png" alt="Keith Weston" class="profile-picture" decoding="async" fetchpriority="high" width="120" height="120">
+                    <img src="images/profile.png" alt="Keith Weston" class="profile-picture" decoding="async" fetchpriority="high" width="120" height="120">
                 </div>
                 <h1 class="name">Keith Weston</h1>
                 <p class="title">User Experience Designer in Austin, TX</p>
@@ -106,7 +103,7 @@
 
             <div class="project-page">
                 <div class="project-hero project-hero-indeed">
-                    <img src="../images/indeed/indeed-header.png" alt="Indeed" class="project-hero-image" decoding="async" fetchpriority="high">
+                    <img src="images/indeed/indeed-header.png" alt="Indeed" class="project-hero-image" decoding="async" fetchpriority="high">
                 </div>
                 
                 <h2 class="project-title">Indeed</h2>
@@ -143,7 +140,7 @@
                         <li>Average support requests per month: 40</li>
                     </ul>
                     <p class="project-paragraph">Inspired by Spotify's Wrapped, I send out a yearly Lunchbox Digest (internally).</p>
-                    <img src="../images/indeed/indeed-digest.png" alt="Lunchbox Digest" class="project-image project-image-no-radius project-image-no-border" loading="lazy" decoding="async">
+                    <img src="images/indeed/indeed-digest.png" alt="Lunchbox Digest" class="project-image project-image-no-radius project-image-no-border" loading="lazy" decoding="async">
                     
                     <h3 class="project-subtitle">System principles & strategy</h3>
                     <p class="project-paragraph">Design systems are people first, technology second. You can create the perfect design system, but if it does not match user expectations, it will not succeed. A few other principles:</p>
@@ -160,16 +157,16 @@
                     <p class="project-paragraph">Our foundational decisions are served via design tokens. In Figma, we use a combination of mostly variables and some styles (gradients, etc.), and in code, tokens are designed to be consumed by any platform. We also have linters in code to ensure developers are using the tokens versus raw values.</p>
                     <p class="project-paragraph"><strong>Related project and impact: Semantic color tokens</strong>. When I first joined Indeed, only global color tokens existed. In 2023, I created and delivered semantic color tokens, enhancing consistency, improving accessibility, and enabling theming such as dark mode. It powered a new theme test, resulting in an estimated $18MM increase in annual revenue.</p>
                     <p class="project-paragraph"><strong>Related project and impact: Indeed Sans</strong>. Indeed was using a Google font, Noto Sans, for all text. A custom font, Indeed Sans, was created to replace it across the company. I coordinated the release with the typography tokens, resulting in an estimated $12MM increase in annual revenue.</p>
-                    <img src="../images/indeed-tokens/tokens-header.png" alt="Tokens header" class="project-image project-image-no-radius" loading="lazy" decoding="async">
+                    <img src="images/indeed-tokens/tokens-header.png" alt="Tokens header" class="project-image project-image-no-radius" loading="lazy" decoding="async">
                     
                     <h3 class="project-subtitle">Components</h3>
                     <p class="project-paragraph">Lunchbox supports components for web (66), mobile (36), and email (28). To reduce confusion, we've delivered these components in different Figma files. This is cleaner for designers who may only work on a single platform.</p>
                     <p class="project-paragraph"><strong>Related project and impact: Mobile apps</strong>. In 2025, I led the partnership with the mobile platform team to take ownership of the mobile app design system. This shift enabled consistency across more platforms and allowed that team to ship more mobile features.</p>
-                    <img src="../images/indeed/figma-thumbnails.png" alt="Figma thumbnails" class="project-image project-image-no-radius" loading="lazy" decoding="async">
+                    <img src="images/indeed/figma-thumbnails.png" alt="Figma thumbnails" class="project-image project-image-no-radius" loading="lazy" decoding="async">
                     
                     <h3 class="project-subtitle">Lunchbox website</h3>
                     <p class="project-paragraph">The website for the design system is the source of truth, and both designers and developers use it to understand all aspects on how they can use Lunchbox. It contains not only tokens and components, but larger recipes, design guides, dev docs, and more.</p>
-                    <img src="../images/indeed/lunchbox-website.png" alt="Lunchbox website" class="project-image project-image-no-radius" loading="lazy" decoding="async">
+                    <img src="images/indeed/lunchbox-website.png" alt="Lunchbox website" class="project-image project-image-no-radius" loading="lazy" decoding="async">
                     
                     <h3 class="project-subtitle">Education, adoption, and support</h3>
                     <p class="project-paragraph">Building the design system is less than half of the work. To ensure education, adoption, and support, we:</p>
@@ -186,16 +183,16 @@
                     
                     <h3 class="project-subtitle">AI</h3>
                     <p class="project-paragraph">AI has exploded over the past two years. Not only have we supported our external-facing AI brand to Indeed customers, we have provided AI mechanisms for our designers and developers. We have created a Lunchbox MCP server, and provide education on how to build prototypes with Cursor.</p>
-                    <img src="../images/indeed/AI.png" alt="AI" class="project-image project-image-no-radius" loading="lazy" decoding="async">
+                    <img src="images/indeed/AI.png" alt="AI" class="project-image project-image-no-radius" loading="lazy" decoding="async">
                     
                     <h3 class="project-subtitle">Lunchbox sentiment</h3>
                     <p class="project-paragraph">Indeed sends surveys to the tech organization to understand what aspects work well and what needs improvement, and the design system consistently ranks near the top.</p>
-                    <img src="../images/indeed/dx-survey.png" alt="DX Survey" class="project-image project-image-no-radius" loading="lazy" decoding="async">
+                    <img src="images/indeed/dx-survey.png" alt="DX Survey" class="project-image project-image-no-radius" loading="lazy" decoding="async">
                 </div>
             </div>
         </main>
     </div>
     
-    <script src="../script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

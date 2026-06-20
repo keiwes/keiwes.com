@@ -24,92 +24,127 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        .homepage-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
-            text-align: center;
-            padding: 40px 20px;
-        }
-        
-        .homepage-avatar {
-            margin-bottom: 0px;
-        }
-        
-        .homepage-name {
-            font-size: 36px;
-            font-weight: 700;
-            color: var(--color-text-primary);
-            margin-bottom: 8px;
-            letter-spacing: -0.5px;
-        }
-        
-        .homepage-title,
-        .homepage-subtitle {
-            font-size: 16px;
-            color: var(--color-text-tertiary);
-            font-weight: 400;
-            margin-bottom: 4px;
-        }
-        
-        .homepage-links {
-            display: flex;
-            gap: 24px;
-            margin-top: 24px;
-            justify-content: center;
-            align-items: center;
-        }
-        
-        .homepage-link {
-            font-size: 16px;
-            color: var(--color-text-secondary);
-            text-decoration: none;
-            transition: color var(--transition-fast);
-        }
-        
-        .homepage-link:hover {
-            color: var(--color-text-primary);
-        }
-        
-        
-        body.dark-mode .homepage-name {
-            color: var(--color-dark-text-primary);
-        }
-        
-        body.dark-mode .homepage-title,
-        body.dark-mode .homepage-subtitle {
-            color: var(--color-dark-text-tertiary);
-        }
-        
-        body.dark-mode .homepage-link {
-            color: var(--color-dark-text-secondary);
-        }
-        
-        body.dark-mode .homepage-link:hover {
-            color: var(--color-dark-text-primary);
-        }
-    </style>
 </head>
 <body>
-    <div class="homepage-container">
-        <div class="homepage-avatar">
-            <div class="profile-picture-wrapper">
-                <img src="images/profile.png" alt="Keith Weston" class="profile-picture" decoding="async" fetchpriority="high" width="120" height="120">
-            </div>
-        </div>
+    <!-- Hamburger Menu Button (Mobile Only) -->
+    <button class="hamburger-menu" id="hamburgerMenu" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <!-- Mobile Drawer -->
+    <div class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+        <nav class="mobile-navigation">
+            <a href="#work" class="nav-link" tabindex="-1">Work</a>
+            <a href="about.html" class="nav-link" tabindex="-1">About</a>
+            <a href="Keith-Weston-Resume.pdf" target="_blank" rel="noopener noreferrer" class="nav-link" tabindex="-1">Resume</a>
+            <a href="https://www.linkedin.com/in/keiwes/" target="_blank" rel="noopener noreferrer" class="nav-link" tabindex="-1">LinkedIn</a>
+            <a href="mailto:keith@keiwes.com" class="nav-link" tabindex="-1">Email</a>
+        </nav>
         
-        <h1 class="homepage-name">Keith Weston</h1>
-        <p class="homepage-title">User Experience Designer in Austin, TX</p>
-        <p class="homepage-subtitle">Lead Designer, Design System @ Indeed</p>
-        
-        <div class="homepage-links">
-            <a href="portfolio/" class="homepage-link">Portfolio</a>
-            <a href="https://www.linkedin.com/in/keiwes/" target="_blank" rel="noopener noreferrer" class="homepage-link">LinkedIn</a>
-            <a href="mailto:keith@keiwes.com" class="homepage-link">Email</a>
-        </div>
+        <button class="toggle-button" id="toggleButton" aria-label="Toggle theme" tabindex="-1">
+            <svg class="sun-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="5"></circle>
+                <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"></path>
+            </svg>
+            <svg class="moon-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+        </button>
     </div>
+
+    <!-- Drawer Overlay -->
+    <div class="drawer-overlay" id="drawerOverlay"></div>
+
+    <div class="container">
+        <!-- Left Sidebar -->
+        <aside class="sidebar">
+            <div class="profile-section">
+                <div class="profile-picture-wrapper">
+                    <img src="images/profile.png" alt="Keith Weston" class="profile-picture" id="profilePicture" decoding="async" fetchpriority="high" width="120" height="120">
+                </div>
+                <h1 class="name">Keith Weston</h1>
+                <p class="title">User Experience Designer in Austin, TX</p>
+                <p class="subtitle">Lead Designer, Design System @ Indeed</p>
+            </div>
+            
+            <nav class="navigation">
+                <a href="#work" class="nav-link">Work</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="Keith-Weston-Resume.pdf" target="_blank" rel="noopener noreferrer" class="nav-link">Resume</a>
+                <a href="https://www.linkedin.com/in/keiwes/" target="_blank" rel="noopener noreferrer" class="nav-link">LinkedIn</a>
+                <a href="mailto:keith@keiwes.com" class="nav-link">Email</a>
+            </nav>
+            
+            <button class="toggle-button toggle-button-desktop" id="toggleButtonDesktop" aria-label="Toggle theme">
+                <svg class="sun-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="5"></circle>
+                    <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"></path>
+                </svg>
+                <svg class="moon-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+            </button>
+        </aside>
+        
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <!-- Mobile Profile Section -->
+            <div class="mobile-profile-section">
+                <div class="profile-picture-wrapper">
+                    <img src="images/profile.png" alt="Keith Weston" class="profile-picture" decoding="async" fetchpriority="high" width="120" height="120">
+                </div>
+                <h1 class="name">Keith Weston</h1>
+                <p class="title">User Experience Designer in Austin, TX</p>
+                <p class="subtitle">Lead Designer, Design System @ Indeed</p>
+            </div>
+
+            <div class="grid-container" id="work">
+                
+                <a href="indeed.html" class="card-link">
+                    <div class="card card-indeed">
+                        <img src="images/indeed/indeed-header.png" alt="Indeed" class="card-image card-image-blizzard" loading="lazy" decoding="async">
+                        <div class="card-content">
+                            <h3 class="card-title">Indeed</h3>
+                            <p class="card-date">2021 – Present</p>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="blizzard.html" class="card-link">
+                    <div class="card card-blizzard">
+                        <img src="images/blizzard/blizzcon-header.png" alt="Blizzard Entertainment" class="card-image card-image-blizzard" loading="lazy" decoding="async">
+                        <div class="card-content">
+                            <h3 class="card-title">Blizzard Entertainment</h3>
+                            <p class="card-date">2017 – 2021</p>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="uship.html" class="card-link">
+                    <div class="card card-uship">
+                        <img src="images/uship/uship-header.png" alt="uShip" class="card-image" loading="lazy" decoding="async">
+                        <div class="card-content">
+                            <h3 class="card-title">uShip</h3>
+                            <p class="card-date">2016 – 2017</p>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="humana.html" class="card-link">
+                    <div class="card card-humana">
+                        <img src="images/humana/humanavitality-mobile-app-header.png" alt="Humana" class="card-image" loading="lazy" decoding="async">
+                        <div class="card-content">
+                            <h3 class="card-title">Humana</h3>
+                            <p class="card-date">2011 – 2016</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </main>
+    </div>
+    
+    <script src="script.js"></script>
 </body>
 </html>

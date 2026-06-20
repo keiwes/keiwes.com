@@ -3,10 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="noindex, nofollow">
-    <meta name="googlebot" content="noindex, nofollow">
-    <meta name="BingBOT" content="noindex, nofollow">
-    <title>Keith Weston - Portfolio</title>
+    <title>Keith Weston - About</title>
     <!-- Prevent flash of white in dark mode -->
     <script>
         (function() {
@@ -20,9 +17,11 @@
         })();
     </script>
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="../images/favicon.png">
-    <link rel="apple-touch-icon" href="../images/favicon.png">
-    <link rel="stylesheet" href="../styles.css">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="apple-touch-icon" href="images/favicon.png">
+    <!-- Preload critical image -->
+    <link rel="preload" as="image" href="images/aboutme.png" fetchpriority="high">
+    <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -38,7 +37,7 @@
     <!-- Mobile Drawer -->
     <div class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
         <nav class="mobile-navigation">
-            <a href="index.html#work" class="nav-link" tabindex="-1">Work</a>
+            <a href="#work" class="nav-link" tabindex="-1">Work</a>
             <a href="about.html" class="nav-link" tabindex="-1">About</a>
             <a href="Keith-Weston-Resume.pdf" target="_blank" rel="noopener noreferrer" class="nav-link" tabindex="-1">Resume</a>
             <a href="https://www.linkedin.com/in/keiwes/" target="_blank" rel="noopener noreferrer" class="nav-link" tabindex="-1">LinkedIn</a>
@@ -64,7 +63,7 @@
         <aside class="sidebar">
             <div class="profile-section">
                 <div class="profile-picture-wrapper">
-                    <img src="../images/profile.png" alt="Keith Weston" class="profile-picture" id="profilePicture" decoding="async" fetchpriority="high" width="120" height="120">
+                    <img src="images/profile.png" alt="Keith Weston" class="profile-picture" id="profilePicture" decoding="async" fetchpriority="high" width="120" height="120">
                 </div>
                 <h1 class="name">Keith Weston</h1>
                 <p class="title">User Experience Designer in Austin, TX</p>
@@ -72,7 +71,7 @@
             </div>
             
             <nav class="navigation">
-                <a href="index.html#work" class="nav-link">Work</a>
+                <a href="#work" class="nav-link">Work</a>
                 <a href="about.html" class="nav-link">About</a>
                 <a href="Keith-Weston-Resume.pdf" target="_blank" rel="noopener noreferrer" class="nav-link">Resume</a>
                 <a href="https://www.linkedin.com/in/keiwes/" target="_blank" rel="noopener noreferrer" class="nav-link">LinkedIn</a>
@@ -95,58 +94,29 @@
             <!-- Mobile Profile Section -->
             <div class="mobile-profile-section">
                 <div class="profile-picture-wrapper">
-                    <img src="../images/profile.png" alt="Keith Weston" class="profile-picture" decoding="async" fetchpriority="high" width="120" height="120">
+                    <img src="images/profile.png" alt="Keith Weston" class="profile-picture" decoding="async" fetchpriority="high" width="120" height="120">
                 </div>
                 <h1 class="name">Keith Weston</h1>
                 <p class="title">User Experience Designer in Austin, TX</p>
                 <p class="subtitle">Lead Designer, Design System @ Indeed</p>
             </div>
 
-            <div class="grid-container">
-                
-                <a href="indeed.html" class="card-link">
-                    <div class="card card-indeed">
-                        <img src="../images/indeed/indeed-header.png" alt="Indeed" class="card-image card-image-blizzard" loading="lazy" decoding="async">
-                        <div class="card-content">
-                            <h3 class="card-title">Indeed</h3>
-                            <p class="card-date">2021 – Present</p>
-                        </div>
-                    </div>
-                </a>
-                
-                <a href="blizzard.html" class="card-link">
-                    <div class="card card-blizzard">
-                        <img src="../images/blizzard/blizzcon-header.png" alt="Blizzard Entertainment" class="card-image card-image-blizzard" loading="lazy" decoding="async">
-                        <div class="card-content">
-                            <h3 class="card-title">Blizzard Entertainment</h3>
-                            <p class="card-date">2017 – 2021</p>
-                        </div>
-                    </div>
-                </a>
-                
-                <a href="uship.html" class="card-link">
-                    <div class="card card-uship">
-                        <img src="../images/uship/uship-header.png" alt="uShip" class="card-image" loading="lazy" decoding="async">
-                        <div class="card-content">
-                            <h3 class="card-title">uShip</h3>
-                            <p class="card-date">2016 – 2017</p>
-                        </div>
-                    </div>
-                </a>
-                
-                <a href="humana.html" class="card-link">
-                    <div class="card card-humana">
-                        <img src="../images/humana/humanavitality-mobile-app-header.png" alt="Humana" class="card-image" loading="lazy" decoding="async">
-                        <div class="card-content">
-                            <h3 class="card-title">Humana</h3>
-                            <p class="card-date">2011 – 2016</p>
-                        </div>
-                    </div>
-                </a>
+            <div class="about-page">
+                <img src="images/aboutme.png" alt="About Me" class="about-image" decoding="async" fetchpriority="high">
+                <h2 class="about-title">About</h2>
+                <div class="about-content">
+                    <p class="about-paragraph">Hello! I'm Keith.</p>
+                    <p class="about-paragraph">I am a lead UX designer with 15 years of experience specializing in design systems and mobile apps. I've worked for large and small companies across gaming, healthcare, logistics, and HR technology.</p>
+                    <p class="about-paragraph">I've loved technology all of my life, and graduated college with a Computer Information Systems degree. Thinking I would be a front-end developer after college, I discovered my love for design and understanding why people interact with technology the way they do.</p>
+                    <p class="about-paragraph">Personally, I'm a husband and a dad of three, living in Austin, Texas. Family life has shaped how I work. It's taught me patience, perspective, and the value of building and maintaining over time.</p>
+                    <p class="about-paragraph">I enjoy board sports, both snowboarding and skateboarding, and try to get outside as much as possible without hurting myself too much. I've been into video games since I was a kid and I credit video games with kick starting my interest in UX. I love a good french press in the morning, and usually have some electronic music on while I work.</p>
+                    <p class="about-paragraph">Feel free to contact me via <a href="https://www.linkedin.com/in/keiwes/" target="_blank" rel="noopener noreferrer" class="about-link">LinkedIn</a> or <a href="mailto:keith@keiwes.com" class="about-link">email</a>.</p>
+                    <p class="about-paragraph"><span class="about-emoji">✌️</span></p>
+                </div>
             </div>
         </main>
     </div>
     
-    <script src="../script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
