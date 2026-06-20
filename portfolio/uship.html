@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="googlebot" content="noindex, nofollow">
+    <meta name="BingBOT" content="noindex, nofollow">
+    <title>Keith Weston - uShip</title>
+    <!-- Prevent flash of white in dark mode -->
+    <script>
+        (function() {
+            const savedTheme = localStorage.getItem('theme');
+            const systemPrefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = savedTheme || (systemPrefersDark ? 'dark' : 'light');
+            if (theme === 'dark') {
+                document.documentElement.classList.add('dark-mode');
+                document.body.classList.add('dark-mode');
+            }
+        })();
+    </script>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../images/favicon.png">
+    <link rel="apple-touch-icon" href="../images/favicon.png">
+    <!-- Preload critical hero image -->
+    <link rel="preload" as="image" href="../images/uship/uship-header.png" fetchpriority="high">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Hamburger Menu Button (Mobile Only) -->
+    <button class="hamburger-menu" id="hamburgerMenu" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <!-- Mobile Drawer -->
+    <div class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+        <nav class="mobile-navigation">
+            <a href="index.html#work" class="nav-link" tabindex="-1">Work</a>
+            <a href="about.html" class="nav-link" tabindex="-1">About</a>
+            <a href="Keith-Weston-Resume.pdf" target="_blank" rel="noopener noreferrer" class="nav-link" tabindex="-1">Resume</a>
+            <a href="https://www.linkedin.com/in/keiwes/" target="_blank" rel="noopener noreferrer" class="nav-link" tabindex="-1">LinkedIn</a>
+            <a href="mailto:keith@keiwes.com" class="nav-link" tabindex="-1">Email</a>
+        </nav>
+        
+        <button class="toggle-button" id="toggleButton" aria-label="Toggle theme" tabindex="-1">
+            <svg class="sun-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="5"></circle>
+                <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"></path>
+            </svg>
+            <svg class="moon-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+        </button>
+    </div>
+
+    <!-- Drawer Overlay -->
+    <div class="drawer-overlay" id="drawerOverlay"></div>
+
+    <div class="container">
+        <!-- Left Sidebar -->
+        <aside class="sidebar">
+            <div class="profile-section">
+                <div class="profile-picture-wrapper">
+                    <img src="../images/profile.png" alt="Keith Weston" class="profile-picture" id="profilePicture" decoding="async" fetchpriority="high" width="120" height="120">
+                </div>
+                <h1 class="name">Keith Weston</h1>
+                <p class="title">User Experience Designer in Austin, TX</p>
+                <p class="subtitle">Lead Designer, Design System @ Indeed</p>
+            </div>
+            
+            <nav class="navigation">
+                <a href="index.html#work" class="nav-link">Work</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="Keith-Weston-Resume.pdf" target="_blank" rel="noopener noreferrer" class="nav-link">Resume</a>
+                <a href="https://www.linkedin.com/in/keiwes/" target="_blank" rel="noopener noreferrer" class="nav-link">LinkedIn</a>
+                <a href="mailto:keith@keiwes.com" class="nav-link">Email</a>
+            </nav>
+            
+            <button class="toggle-button toggle-button-desktop" id="toggleButtonDesktop" aria-label="Toggle theme">
+                <svg class="sun-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="5"></circle>
+                    <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"></path>
+                </svg>
+                <svg class="moon-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+            </button>
+        </aside>
+        
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <!-- Mobile Profile Section -->
+            <div class="mobile-profile-section">
+                <div class="profile-picture-wrapper">
+                    <img src="../images/profile.png" alt="Keith Weston" class="profile-picture" decoding="async" fetchpriority="high" width="120" height="120">
+                </div>
+                <h1 class="name">Keith Weston</h1>
+                <p class="title">User Experience Designer in Austin, TX</p>
+                <p class="subtitle">Lead Designer, Design System @ Indeed</p>
+            </div>
+
+            <div class="project-page">
+                <div class="project-hero project-hero-uship">
+                    <img src="../images/uship/uship-header.png" alt="uShip" class="project-hero-image" decoding="async" fetchpriority="high">
+                </div>
+                
+                <h2 class="project-title">uShip</h2>
+                
+                <div class="project-roles">
+                    <p class="project-label">Role held:</p>
+                    <ul class="roles-list">
+                        <li>Senior Mobile UX Designer (2016 – 2017)</li>
+                    </ul>
+                </div>
+                
+                <div class="project-content">
+                    <h3 class="project-subtitle">Mobile app redesign</h3>
+                    <p class="project-paragraph">When I joined uShip in summer 2016, the company was undergoing a major brand update. The web was about halfway redesigned, and I completed the mobile app redesign. Most of the rebranding was a visual update, but we did make some interaction improvements as well.</p>
+                    <img src="../images/uship/drawer-navigation.png" alt="Drawer Navigation" class="project-image project-image-no-radius project-image-no-border">
+                    <img src="../images/uship/ship.png" alt="Ship" class="project-image project-image-no-radius project-image-no-border">
+                    
+                    <h3 class="project-subtitle">Tab bar navigation</h3>
+                    <p class="project-paragraph">Following the visual rebranding to match the new company style, we saw a possible improvement to the mobile app navigation with a tab bar. Tab Bar navigation was becoming the preferred method of mobile navigation over the drawer navigation for many reasons, such as higher engagement and thumb reach. We saw an average of 5%+ user engagement with sections previously hidden.</p>
+                    <img src="../images/uship/ios-tab-bar.png" alt="iOS Tab Bar" class="project-image project-image-no-radius project-image-no-border">
+                    <img src="../images/uship/android-tab-bar.png" alt="Android Tab Bar" class="project-image project-image-no-radius project-image-no-border">
+                    
+                    <h3 class="project-subtitle">Edit shipments</h3>
+                    <p class="project-paragraph">The ability to edit a shipment did not exist in the product, leading to a high number of customer service calls. Although it sounds simple, there were many different scenarios that had to be considered for editing, such as price changes after a booking. This project was also completed on the web at the same time, so product coordination with the web team was critical.</p>
+                    <img src="../images/uship/edit-shipments.png" alt="Edit Shipments" class="project-image project-image-no-radius project-image-no-border">
+                    
+                    <h3 class="project-subtitle">User feedback</h3>
+                    <p class="project-paragraph">Getting carriers into our physical office for research and usability testing was difficult, as the carriers were often on the road. We still greatly desired this feedback, so we built it into the app. After this feature was released, the team received an average of 10 emails a week with feedback.</p>
+                    <img src="../images/uship/app-feedback.png" alt="App Feedback" class="project-image project-image-no-radius project-image-extra-small project-image-no-border">
+                    
+                    <h3 class="project-subtitle">Keeping up with mobile technology</h3>
+                    <p class="project-paragraph">Apple and Android make updates frequently, and ensuring that an app stays current is crucial. One example of this was Apple's introduction of device permissions dialogs. At first our users found these jarring as they were learning this new paradigm. To help with this, we created permission "warmers" to let users know why we were asking for permission, leading to an increased notification opt-in rate.</p>
+                    <img src="../images/uship/warmer.png" alt="Warmer" class="project-image project-image-no-radius project-image-no-border">
+                    
+                    <h3 class="project-subtitle">Drive4Schenker mobile app</h3>
+                    <p class="project-paragraph">In 2016, uShip signed a $25MM deal with one of the world's largest logistics companies, DB Schenker, to provide shipping technology. We created a mobile app for the Drive4Schenker drivers to keep track of their shipments digitally. This had previously been completed with pen and paper. With the app, drivers could view their daily schedule, mark transit statuses per shipment (picked up, delivered), and take photos of the shipments. This information could be immediately communicated to their dispatchers.</p>
+                    <img src="../images/uship/d4s-registration.png" alt="D4S Registration" class="project-image project-image-no-radius project-image-no-border">
+                    <img src="../images/uship/d4s-photo.png" alt="D4S Photo" class="project-image project-image-no-radius project-image-no-border">
+                    <img src="../images/uship/d4s-delivery.png" alt="D4S Delivery" class="project-image project-image-no-radius project-image-no-border">
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script src="../script.js"></script>
+</body>
+</html>

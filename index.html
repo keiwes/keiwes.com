@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Keith Weston - User Experience Designer in Austin, TX. Lead Designer, Design System @ Indeed.">
+    <title>Keith Weston</title>
+    <!-- Prevent flash of white in dark mode -->
+    <script>
+        (function() {
+            const savedTheme = localStorage.getItem('theme');
+            const systemPrefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = savedTheme || (systemPrefersDark ? 'dark' : 'light');
+            if (theme === 'dark') {
+                document.documentElement.classList.add('dark-mode');
+                document.body.classList.add('dark-mode');
+            }
+        })();
+    </script>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="apple-touch-icon" href="images/favicon.png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .homepage-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            text-align: center;
+            padding: 40px 20px;
+        }
+        
+        .homepage-avatar {
+            margin-bottom: 0px;
+        }
+        
+        .homepage-name {
+            font-size: 36px;
+            font-weight: 700;
+            color: var(--color-text-primary);
+            margin-bottom: 8px;
+            letter-spacing: -0.5px;
+        }
+        
+        .homepage-title,
+        .homepage-subtitle {
+            font-size: 16px;
+            color: var(--color-text-tertiary);
+            font-weight: 400;
+            margin-bottom: 4px;
+        }
+        
+        .homepage-links {
+            display: flex;
+            gap: 24px;
+            margin-top: 24px;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .homepage-link {
+            font-size: 16px;
+            color: var(--color-text-secondary);
+            text-decoration: none;
+            transition: color var(--transition-fast);
+        }
+        
+        .homepage-link:hover {
+            color: var(--color-text-primary);
+        }
+        
+        
+        body.dark-mode .homepage-name {
+            color: var(--color-dark-text-primary);
+        }
+        
+        body.dark-mode .homepage-title,
+        body.dark-mode .homepage-subtitle {
+            color: var(--color-dark-text-tertiary);
+        }
+        
+        body.dark-mode .homepage-link {
+            color: var(--color-dark-text-secondary);
+        }
+        
+        body.dark-mode .homepage-link:hover {
+            color: var(--color-dark-text-primary);
+        }
+    </style>
+</head>
+<body>
+    <div class="homepage-container">
+        <div class="homepage-avatar">
+            <div class="profile-picture-wrapper">
+                <img src="images/profile.png" alt="Keith Weston" class="profile-picture" decoding="async" fetchpriority="high" width="120" height="120">
+            </div>
+        </div>
+        
+        <h1 class="homepage-name">Keith Weston</h1>
+        <p class="homepage-title">User Experience Designer in Austin, TX</p>
+        <p class="homepage-subtitle">Lead Designer, Design System @ Indeed</p>
+        
+        <div class="homepage-links">
+            <a href="portfolio/" class="homepage-link">Portfolio</a>
+            <a href="https://www.linkedin.com/in/keiwes/" target="_blank" rel="noopener noreferrer" class="homepage-link">LinkedIn</a>
+            <a href="mailto:keith@keiwes.com" class="homepage-link">Email</a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="googlebot" content="noindex, nofollow">
+    <meta name="BingBOT" content="noindex, nofollow">
+    <title>Keith Weston - Portfolio</title>
+    <!-- Prevent flash of white in dark mode -->
+    <script>
+        (function() {
+            const savedTheme = localStorage.getItem('theme');
+            const systemPrefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = savedTheme || (systemPrefersDark ? 'dark' : 'light');
+            if (theme === 'dark') {
+                document.documentElement.classList.add('dark-mode');
+                document.body.classList.add('dark-mode');
+            }
+        })();
+    </script>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../images/favicon.png">
+    <link rel="apple-touch-icon" href="../images/favicon.png">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Hamburger Menu Button (Mobile Only) -->
+    <button class="hamburger-menu" id="hamburgerMenu" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <!-- Mobile Drawer -->
+    <div class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+        <nav class="mobile-navigation">
+            <a href="index.html#work" class="nav-link" tabindex="-1">Work</a>
+            <a href="about.html" class="nav-link" tabindex="-1">About</a>
+            <a href="Keith-Weston-Resume.pdf" target="_blank" rel="noopener noreferrer" class="nav-link" tabindex="-1">Resume</a>
+            <a href="https://www.linkedin.com/in/keiwes/" target="_blank" rel="noopener noreferrer" class="nav-link" tabindex="-1">LinkedIn</a>
+            <a href="mailto:keith@keiwes.com" class="nav-link" tabindex="-1">Email</a>
+        </nav>
+        
+        <button class="toggle-button" id="toggleButton" aria-label="Toggle theme" tabindex="-1">
+            <svg class="sun-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="5"></circle>
+                <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"></path>
+            </svg>
+            <svg class="moon-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+        </button>
+    </div>
+
+    <!-- Drawer Overlay -->
+    <div class="drawer-overlay" id="drawerOverlay"></div>
+
+    <div class="container">
+        <!-- Left Sidebar -->
+        <aside class="sidebar">
+            <div class="profile-section">
+                <div class="profile-picture-wrapper">
+                    <img src="../images/profile.png" alt="Keith Weston" class="profile-picture" id="profilePicture" decoding="async" fetchpriority="high" width="120" height="120">
+                </div>
+                <h1 class="name">Keith Weston</h1>
+                <p class="title">User Experience Designer in Austin, TX</p>
+                <p class="subtitle">Lead Designer, Design System @ Indeed</p>
+            </div>
+            
+            <nav class="navigation">
+                <a href="index.html#work" class="nav-link">Work</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="Keith-Weston-Resume.pdf" target="_blank" rel="noopener noreferrer" class="nav-link">Resume</a>
+                <a href="https://www.linkedin.com/in/keiwes/" target="_blank" rel="noopener noreferrer" class="nav-link">LinkedIn</a>
+                <a href="mailto:keith@keiwes.com" class="nav-link">Email</a>
+            </nav>
+            
+            <button class="toggle-button toggle-button-desktop" id="toggleButtonDesktop" aria-label="Toggle theme">
+                <svg class="sun-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="5"></circle>
+                    <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"></path>
+                </svg>
+                <svg class="moon-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+            </button>
+        </aside>
+        
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <!-- Mobile Profile Section -->
+            <div class="mobile-profile-section">
+                <div class="profile-picture-wrapper">
+                    <img src="../images/profile.png" alt="Keith Weston" class="profile-picture" decoding="async" fetchpriority="high" width="120" height="120">
+                </div>
+                <h1 class="name">Keith Weston</h1>
+                <p class="title">User Experience Designer in Austin, TX</p>
+                <p class="subtitle">Lead Designer, Design System @ Indeed</p>
+            </div>
+
+            <div class="grid-container">
+                
+                <a href="indeed.html" class="card-link">
+                    <div class="card card-indeed">
+                        <img src="../images/indeed/indeed-header.png" alt="Indeed" class="card-image card-image-blizzard" loading="lazy" decoding="async">
+                        <div class="card-content">
+                            <h3 class="card-title">Indeed</h3>
+                            <p class="card-date">2021 – Present</p>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="blizzard.html" class="card-link">
+                    <div class="card card-blizzard">
+                        <img src="../images/blizzard/blizzcon-header.png" alt="Blizzard Entertainment" class="card-image card-image-blizzard" loading="lazy" decoding="async">
+                        <div class="card-content">
+                            <h3 class="card-title">Blizzard Entertainment</h3>
+                            <p class="card-date">2017 – 2021</p>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="uship.html" class="card-link">
+                    <div class="card card-uship">
+                        <img src="../images/uship/uship-header.png" alt="uShip" class="card-image" loading="lazy" decoding="async">
+                        <div class="card-content">
+                            <h3 class="card-title">uShip</h3>
+                            <p class="card-date">2016 – 2017</p>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="humana.html" class="card-link">
+                    <div class="card card-humana">
+                        <img src="../images/humana/humanavitality-mobile-app-header.png" alt="Humana" class="card-image" loading="lazy" decoding="async">
+                        <div class="card-content">
+                            <h3 class="card-title">Humana</h3>
+                            <p class="card-date">2011 – 2016</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </main>
+    </div>
+    
+    <script src="../script.js"></script>
+</body>
+</html>

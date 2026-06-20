@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="googlebot" content="noindex, nofollow">
+    <meta name="BingBOT" content="noindex, nofollow">
+    <title>Keith Weston - Humana</title>
+    <!-- Prevent flash of white in dark mode -->
+    <script>
+        (function() {
+            const savedTheme = localStorage.getItem('theme');
+            const systemPrefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = savedTheme || (systemPrefersDark ? 'dark' : 'light');
+            if (theme === 'dark') {
+                document.documentElement.classList.add('dark-mode');
+                document.body.classList.add('dark-mode');
+            }
+        })();
+    </script>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../images/favicon.png">
+    <link rel="apple-touch-icon" href="../images/favicon.png">
+    <!-- Preload critical hero image -->
+    <link rel="preload" as="image" href="../images/humana/humanavitality-mobile-app-header.png" fetchpriority="high">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Hamburger Menu Button (Mobile Only) -->
+    <button class="hamburger-menu" id="hamburgerMenu" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <!-- Mobile Drawer -->
+    <div class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+        <nav class="mobile-navigation">
+            <a href="index.html#work" class="nav-link" tabindex="-1">Work</a>
+            <a href="about.html" class="nav-link" tabindex="-1">About</a>
+            <a href="Keith-Weston-Resume.pdf" target="_blank" rel="noopener noreferrer" class="nav-link" tabindex="-1">Resume</a>
+            <a href="https://www.linkedin.com/in/keiwes/" target="_blank" rel="noopener noreferrer" class="nav-link" tabindex="-1">LinkedIn</a>
+            <a href="mailto:keith@keiwes.com" class="nav-link" tabindex="-1">Email</a>
+        </nav>
+        
+        <button class="toggle-button" id="toggleButton" aria-label="Toggle theme" tabindex="-1">
+            <svg class="sun-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="5"></circle>
+                <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"></path>
+            </svg>
+            <svg class="moon-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+        </button>
+    </div>
+
+    <!-- Drawer Overlay -->
+    <div class="drawer-overlay" id="drawerOverlay"></div>
+
+    <div class="container">
+        <!-- Left Sidebar -->
+        <aside class="sidebar">
+            <div class="profile-section">
+                <div class="profile-picture-wrapper">
+                    <img src="../images/profile.png" alt="Keith Weston" class="profile-picture" id="profilePicture" decoding="async" fetchpriority="high" width="120" height="120">
+                </div>
+                <h1 class="name">Keith Weston</h1>
+                <p class="title">User Experience Designer in Austin, TX</p>
+                <p class="subtitle">Lead Designer, Design System @ Indeed</p>
+            </div>
+            
+            <nav class="navigation">
+                <a href="index.html#work" class="nav-link">Work</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="Keith-Weston-Resume.pdf" target="_blank" rel="noopener noreferrer" class="nav-link">Resume</a>
+                <a href="https://www.linkedin.com/in/keiwes/" target="_blank" rel="noopener noreferrer" class="nav-link">LinkedIn</a>
+                <a href="mailto:keith@keiwes.com" class="nav-link">Email</a>
+            </nav>
+            
+            <button class="toggle-button toggle-button-desktop" id="toggleButtonDesktop" aria-label="Toggle theme">
+                <svg class="sun-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="5"></circle>
+                    <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"></path>
+                </svg>
+                <svg class="moon-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+            </button>
+        </aside>
+        
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <!-- Mobile Profile Section -->
+            <div class="mobile-profile-section">
+                <div class="profile-picture-wrapper">
+                    <img src="../images/profile.png" alt="Keith Weston" class="profile-picture" decoding="async" fetchpriority="high" width="120" height="120">
+                </div>
+                <h1 class="name">Keith Weston</h1>
+                <p class="title">User Experience Designer in Austin, TX</p>
+                <p class="subtitle">Lead Designer, Design System @ Indeed</p>
+            </div>
+
+            <div class="project-page">
+                <div class="project-hero">
+                    <img src="../images/humana/humanavitality-mobile-app-header.png" alt="Humana" class="project-hero-image" decoding="async" fetchpriority="high">
+                </div>
+                
+                <h2 class="project-title">Humana</h2>
+                
+                <div class="project-roles">
+                    <p class="project-label">Roles held:</p>
+                    <ul class="roles-list">
+                        <li>Lead Mobile UX Designer (2015 – 2016)</li>
+                        <li>Mobile UX Designer (2014 – 2015)</li>
+                        <li>UX Designer (2011 – 2014)</li>
+                    </ul>
+                </div>
+                
+                <div class="project-content">
+                    <h3 class="project-subtitle">A family of mobile apps</h3>
+                    <p class="project-paragraph">As the lead designer for the mobile apps at Humana, I worked with the 4 teams that created the 4 mobile apps, with each team having 1-2 designers. It was important that these apps act like a family of apps, building recognition and trust with users. I created the template for the app icon so that all 4 apps looked like they belonged together. I also led efforts for new technology across the apps, such as implementing Touch ID in the same manner.</p>
+                    <img src="../images/humana/touch-id.png" alt="Touch ID" class="project-image project-image-no-radius project-image-no-border">
+                    
+                    <h3 class="project-subtitle">MyHumana mobile app redesign</h3>
+                    <p class="project-paragraph">The primary mobile app for the company, MyHumana, had existed for 2 years by 2015. Through a combination of app reviews, user interviews, analytics, and usability testing, we decided it was time for a redesign. What we learned:</p>
+                    <ol class="project-list">
+                        <li><strong>Performance.</strong> The app was very slow compared to other common apps.</li>
+                        <li><strong>Navigation.</strong> Users were having trouble finding areas of the app that were important to them.</li>
+                        <li><strong>Emphasis of important features.</strong> Not all features are created equal. This also included omitting features users did not find useful.</li>
+                        <li><strong>Native features and styles.</strong> The previous app was designed once for both iOS and Android.</li>
+                    </ol>
+                    <p class="project-paragraph">The redesign effort began in September 2015 and the app released in February of 2016.</p>
+                    <p class="project-paragraph">Engineering did what they could to address performance. From design, we used methods to increase perceived affordance, such as breaking up the first sign in process.</p>
+                    <img src="../images/humana/myhumana-sign-in.png" alt="MyHumana Sign In" class="project-image project-image-no-radius project-image-no-border">
+                    <p class="project-paragraph">To help determine how prominently to display features, we asked users to rank their importance.</p>
+                    <table class="project-table">
+                        <thead>
+                            <tr>
+                                <th>Category</th>
+                                <th>Average</th>
+                                <th>Rank</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Coverage and Benefits</td>
+                                <td>2.94</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>Claims</td>
+                                <td>4.20</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td>Find a Provider</td>
+                                <td>5.10</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>Deductibles</td>
+                                <td>5.12</td>
+                                <td>4</td>
+                            </tr>
+                            <tr>
+                                <td>ID Card</td>
+                                <td>5.22</td>
+                                <td>5</td>
+                            </tr>
+                            <tr>
+                                <td>Drug Pricing</td>
+                                <td>6.00</td>
+                                <td>6</td>
+                            </tr>
+                            <tr>
+                                <td>Contact Humana</td>
+                                <td>6.61</td>
+                                <td>7</td>
+                            </tr>
+                            <tr>
+                                <td>Spending Accounts</td>
+                                <td>6.84</td>
+                                <td>8</td>
+                            </tr>
+                            <tr>
+                                <td>Secure Messages</td>
+                                <td>6.96</td>
+                                <td>9</td>
+                            </tr>
+                            <tr>
+                                <td>Update Personal Information</td>
+                                <td>7.10</td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <td>Notifications</td>
+                                <td>7.14</td>
+                                <td>11</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p class="project-paragraph">We handled navigation differently for iOS and Android, to make the apps feel more authentically mobile by matching the OS patterns. We made adjustments to each view, always talking to users along the way.</p>
+                    <p class="project-paragraph">The old experience:</p>
+                    <img src="../images/humana/myhumana-old-navigation.png" alt="MyHumana Old Navigation" class="project-image project-image-no-radius project-image-no-border">
+                    <p class="project-paragraph">The new experience, iOS and Android:</p>
+                    <img src="../images/humana/ios-navigation.png" alt="iOS Navigation" class="project-image project-image-no-radius project-image-no-border">
+                    <img src="../images/humana/android-navigation.png" alt="Android Navigation" class="project-image project-image-no-radius project-image-no-border">
+                    <p class="project-paragraph">A few other samples with original designs on the left, new designs on the right.</p>
+                    <img src="../images/humana/claims.png" alt="Claims" class="project-image project-image-no-radius project-image-no-border">
+                    <img src="../images/humana/claim-details.png" alt="Claim Details" class="project-image project-image-no-radius project-image-no-border">
+                    <img src="../images/humana/doctor-details.png" alt="Doctor Details" class="project-image project-image-no-radius project-image-no-border">
+                    <p class="project-paragraph">The feedback we received was immediate. 104k users downloaded the redesigned app in the first week. Crashes via analytics were greatly reduced, usability sessions went smoother, and app store ratings increased.</p>
+                    <img src="../images/humana/app-store-reviews.png" alt="App Store Reviews" class="project-image project-image-no-radius project-image-no-border">
+                    
+                    <h3 class="project-subtitle">HumanaVitality</h3>
+                    <p class="project-paragraph">Before stepping into the lead design role, my focus was the HumanaVitality mobile app (now branded as Go365). It was an app focused on making members healthy by offering rewards for activity. It was my first experience working with a mobile app, and I learned a great deal about mobile design and technology such as connections with fitness trackers and payment systems.</p>
+                    <img src="../images/humana/humanavitality-mobile-app.png" alt="HumanaVitality Mobile App" class="project-image project-image-no-radius project-image-small project-image-no-border">
+                    
+                    <h3 class="project-subtitle">Form design and Operations</h3>
+                    <p class="project-paragraph">Before heading into mobile app design, I worked on applications used by doctors and nurses, mostly data entry. I also shifted to a design operations team, where I taught UX design such as tools and processes to product teams. <a href="https://youtu.be/J2BDVM6Qw5s" target="_blank" rel="noopener noreferrer" class="project-link">Here</a> is one of my videos I decided to upload to YouTube, which gained over 200k views. (Keep in mind 2013, content is dated, but gives a good idea on how I taught at the time)</p>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script src="../script.js"></script>
+</body>
+</html>

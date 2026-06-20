@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="googlebot" content="noindex, nofollow">
+    <meta name="BingBOT" content="noindex, nofollow">
+    <title>Keith Weston - Indeed</title>
+    <!-- Prevent flash of white in dark mode -->
+    <script>
+        (function() {
+            const savedTheme = localStorage.getItem('theme');
+            const systemPrefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = savedTheme || (systemPrefersDark ? 'dark' : 'light');
+            if (theme === 'dark') {
+                document.documentElement.classList.add('dark-mode');
+                document.body.classList.add('dark-mode');
+            }
+        })();
+    </script>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../images/favicon.png">
+    <link rel="apple-touch-icon" href="../images/favicon.png">
+    <!-- Preload critical hero image -->
+    <link rel="preload" as="image" href="../images/indeed/indeed-header.png" fetchpriority="high">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Hamburger Menu Button (Mobile Only) -->
+    <button class="hamburger-menu" id="hamburgerMenu" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <!-- Mobile Drawer -->
+    <div class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+        <nav class="mobile-navigation">
+            <a href="index.html#work" class="nav-link" tabindex="-1">Work</a>
+            <a href="about.html" class="nav-link" tabindex="-1">About</a>
+            <a href="Keith-Weston-Resume.pdf" target="_blank" rel="noopener noreferrer" class="nav-link" tabindex="-1">Resume</a>
+            <a href="https://www.linkedin.com/in/keiwes/" target="_blank" rel="noopener noreferrer" class="nav-link" tabindex="-1">LinkedIn</a>
+            <a href="mailto:keith@keiwes.com" class="nav-link" tabindex="-1">Email</a>
+        </nav>
+        
+        <button class="toggle-button" id="toggleButton" aria-label="Toggle theme" tabindex="-1">
+            <svg class="sun-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="5"></circle>
+                <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"></path>
+            </svg>
+            <svg class="moon-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+        </button>
+    </div>
+
+    <!-- Drawer Overlay -->
+    <div class="drawer-overlay" id="drawerOverlay"></div>
+
+    <div class="container">
+        <!-- Left Sidebar -->
+        <aside class="sidebar">
+            <div class="profile-section">
+                <div class="profile-picture-wrapper">
+                    <img src="../images/profile.png" alt="Keith Weston" class="profile-picture" id="profilePicture" decoding="async" fetchpriority="high" width="120" height="120">
+                </div>
+                <h1 class="name">Keith Weston</h1>
+                <p class="title">User Experience Designer in Austin, TX</p>
+                <p class="subtitle">Lead Designer, Design System @ Indeed</p>
+            </div>
+            
+            <nav class="navigation">
+                <a href="index.html#work" class="nav-link">Work</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="Keith-Weston-Resume.pdf" target="_blank" rel="noopener noreferrer" class="nav-link">Resume</a>
+                <a href="https://www.linkedin.com/in/keiwes/" target="_blank" rel="noopener noreferrer" class="nav-link">LinkedIn</a>
+                <a href="mailto:keith@keiwes.com" class="nav-link">Email</a>
+            </nav>
+            
+            <button class="toggle-button toggle-button-desktop" id="toggleButtonDesktop" aria-label="Toggle theme">
+                <svg class="sun-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="5"></circle>
+                    <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"></path>
+                </svg>
+                <svg class="moon-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+            </button>
+        </aside>
+        
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <!-- Mobile Profile Section -->
+            <div class="mobile-profile-section">
+                <div class="profile-picture-wrapper">
+                    <img src="../images/profile.png" alt="Keith Weston" class="profile-picture" decoding="async" fetchpriority="high" width="120" height="120">
+                </div>
+                <h1 class="name">Keith Weston</h1>
+                <p class="title">User Experience Designer in Austin, TX</p>
+                <p class="subtitle">Lead Designer, Design System @ Indeed</p>
+            </div>
+
+            <div class="project-page">
+                <div class="project-hero project-hero-indeed">
+                    <img src="../images/indeed/indeed-header.png" alt="Indeed" class="project-hero-image" decoding="async" fetchpriority="high">
+                </div>
+                
+                <h2 class="project-title">Indeed</h2>
+                
+                <div class="project-roles">
+                    <p class="project-label">Roles held:</p>
+                    <ul class="roles-list">
+                        <li>Lead UX Designer, Design System (2023 – Present)</li>
+                        <li>Senior UX Designer, Design System (2021 – 2023)</li>
+                    </ul>
+                </div>
+                
+                <div class="project-content">
+                    <p class="project-paragraph">As the lead UX designer for the Indeed Design System, Lunchbox, I helped shape and scale the design system that underpins one of the world's largest job marketplaces.</p>
+                    
+                    
+                    <h3 class="project-subtitle">Overview and reach</h3>
+                    <p class="project-paragraph">The Indeed design system began in 2020. After version 7 released in 2025, the design system is now mandated for all product teams and has 95%+ adoption across the company. The Indeed design system underwent a rebrand to Lunchbox in 2025, and supports web (React), mobile apps (iOS, Android, React Native), and email.</p>
+                    <p class="project-paragraph" style="margin-top: 16px; margin-bottom: 8px;"><strong>By the numbers, as of 2026</strong></p>
+                    <ul class="project-stats-list">
+                        <li>Company size: 11k+</li>
+                        <li>Indeed UX org size: 226</li>
+                        <li>Design system team members: 18</li>
+                        <li>Lunchbox Slack support channel members: 705</li>
+                        <li>Design system "guild" members: 32</li>
+                        <li>Full Figma seats: 455</li>
+                        <li>Web components: 66</li>
+                        <li>Mobile app components: 36</li>
+                        <li>Email components: 28</li>
+                        <li>Total Figma view seats: 3,674</li>
+                        <li>Major releases per year: 1-2</li>
+                        <li>Minor releases per year: 12</li>
+                        <li>Office hours per month: 4</li>
+                        <li>Average support requests per month: 40</li>
+                    </ul>
+                    <p class="project-paragraph">Inspired by Spotify's Wrapped, I send out a yearly Lunchbox Digest (internally).</p>
+                    <img src="../images/indeed/indeed-digest.png" alt="Lunchbox Digest" class="project-image project-image-no-radius project-image-no-border" loading="lazy" decoding="async">
+                    
+                    <h3 class="project-subtitle">System principles & strategy</h3>
+                    <p class="project-paragraph">Design systems are people first, technology second. You can create the perfect design system, but if it does not match user expectations, it will not succeed. A few other principles:</p>
+                    <ul class="project-stats-list">
+                        <li><strong>Performance is king.</strong> All decisions need to keep site/app speed in mind.</li>
+                        <li><strong>Rigorous design and dev alignment.</strong> If it's in Figma, it's in code. On release days, designers and developers coordinate on releasing versions.</li>
+                        <li><strong>A design system is the floor, not the ceiling.</strong> An experience can't be 100% made with the design system, and custom components are good for innovation.</li>
+                    </ul>
+                    
+                    <h3 class="project-subtitle">Figma mastery</h3>
+                    <p class="project-paragraph">Figma is an important tool for our design system. In the 5 years I have been supporting Lunchbox in Figma, I have become an expert with the tool. A significant portion of our work is keeping up with Figma changes, and understanding how those changes will affect our Figma deliverables and processes. Some examples, we've had to make significant changes with component variants, variables, booleans, branches, and many more. I am also a Figma admin at Indeed, and I always attend the Config and Schema conferences.</p>
+                    
+                    <h3 class="project-subtitle">Foundations</h3>
+                    <p class="project-paragraph">Our foundational decisions are served via design tokens. In Figma, we use a combination of mostly variables and some styles (gradients, etc.), and in code, tokens are designed to be consumed by any platform. We also have linters in code to ensure developers are using the tokens versus raw values.</p>
+                    <p class="project-paragraph"><strong>Related project and impact: Semantic color tokens</strong>. When I first joined Indeed, only global color tokens existed. In 2023, I created and delivered semantic color tokens, enhancing consistency, improving accessibility, and enabling theming such as dark mode. It powered a new theme test, resulting in an estimated $18MM increase in annual revenue.</p>
+                    <p class="project-paragraph"><strong>Related project and impact: Indeed Sans</strong>. Indeed was using a Google font, Noto Sans, for all text. A custom font, Indeed Sans, was created to replace it across the company. I coordinated the release with the typography tokens, resulting in an estimated $12MM increase in annual revenue.</p>
+                    <img src="../images/indeed-tokens/tokens-header.png" alt="Tokens header" class="project-image project-image-no-radius" loading="lazy" decoding="async">
+                    
+                    <h3 class="project-subtitle">Components</h3>
+                    <p class="project-paragraph">Lunchbox supports components for web (66), mobile (36), and email (28). To reduce confusion, we've delivered these components in different Figma files. This is cleaner for designers who may only work on a single platform.</p>
+                    <p class="project-paragraph"><strong>Related project and impact: Mobile apps</strong>. In 2025, I led the partnership with the mobile platform team to take ownership of the mobile app design system. This shift enabled consistency across more platforms and allowed that team to ship more mobile features.</p>
+                    <img src="../images/indeed/figma-thumbnails.png" alt="Figma thumbnails" class="project-image project-image-no-radius" loading="lazy" decoding="async">
+                    
+                    <h3 class="project-subtitle">Lunchbox website</h3>
+                    <p class="project-paragraph">The website for the design system is the source of truth, and both designers and developers use it to understand all aspects on how they can use Lunchbox. It contains not only tokens and components, but larger recipes, design guides, dev docs, and more.</p>
+                    <img src="../images/indeed/lunchbox-website.png" alt="Lunchbox website" class="project-image project-image-no-radius" loading="lazy" decoding="async">
+                    
+                    <h3 class="project-subtitle">Education, adoption, and support</h3>
+                    <p class="project-paragraph">Building the design system is less than half of the work. To ensure education, adoption, and support, we:</p>
+                    <ul class="project-bullet-list">
+                        <li>Have a weekly support rotation including office hours</li>
+                        <li>Provide both recorded instructional videos and live classes</li>
+                        <li>Meet with individual teams to understand their vision</li>
+                        <li>Monitor metrics to understand use and changes needed</li>
+                    </ul>
+                    <p class="project-paragraph">The effort put into the education, adoption, and support led to the success and mandate of the design system at Indeed.</p>
+                    
+                    <h3 class="project-subtitle">Collaboration with support teams</h3>
+                    <p class="project-paragraph">We collaborate with other support teams at Indeed such as a11y, content design, UX research, data science, UX ops, dev ops, mobile platform, and more. For some teams, we meet weekly, such as our Lunchbox a11y meeting. The feedback from these teams help shape the product Lunchbox offers.</p>
+                    
+                    <h3 class="project-subtitle">AI</h3>
+                    <p class="project-paragraph">AI has exploded over the past two years. Not only have we supported our external-facing AI brand to Indeed customers, we have provided AI mechanisms for our designers and developers. We have created a Lunchbox MCP server, and provide education on how to build prototypes with Cursor.</p>
+                    <img src="../images/indeed/AI.png" alt="AI" class="project-image project-image-no-radius" loading="lazy" decoding="async">
+                    
+                    <h3 class="project-subtitle">Lunchbox sentiment</h3>
+                    <p class="project-paragraph">Indeed sends surveys to the tech organization to understand what aspects work well and what needs improvement, and the design system consistently ranks near the top.</p>
+                    <img src="../images/indeed/dx-survey.png" alt="DX Survey" class="project-image project-image-no-radius" loading="lazy" decoding="async">
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script src="../script.js"></script>
+</body>
+</html>
