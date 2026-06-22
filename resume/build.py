@@ -12,8 +12,17 @@ from pathlib import Path
 from pypdf import PdfReader, PdfWriter
 
 ROOT = Path(__file__).resolve().parent
-HTML_FILE = ROOT / "Keith-Weston-Resume.html"
-PDF_FILE = ROOT / "Keith-Weston-Resume.pdf"
+
+RESUME_VARIANTS = {
+    "portfolio": {
+        "html": ROOT / "Keith-Weston-Resume.html",
+        "pdf": ROOT / "Keith-Weston-Resume.pdf",
+    },
+    "site": {
+        "html": ROOT / "Keith-Weston-Resume-Site.html",
+        "pdf": ROOT / "Keith-Weston-Resume-Site.pdf",
+    },
+}
 
 CHROME_CANDIDATES = (
     "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
@@ -42,8 +51,8 @@ def find_chrome() -> Path:
     )
 
 
-def export_pdf(chrome: Path) -> None:
-    html_url = HTML_FILE.resolve().as_uri()
+def export_pdf(chrome: Path, html_file: Path, pdf_file: Path) -> None:
+    html_url = html_file.resolve().as_uri()
     with tempfile.NamedTemporaryFile(suffix=".pdf", delete=False) as tmp:
         tmp_path = Path(tmp.name)
 
@@ -71,16 +80,32 @@ def export_pdf(chrome: Path) -> None:
         reader = PdfReader(str(tmp_path))
         writer = PdfWriter(clone_from=reader)
         writer.add_metadata(PDF_METADATA)
-        with PDF_FILE.open("wb") as output:
+        with pdf_file.open("wb") as output:
             writer.write(output)
     finally:
         tmp_path.unlink(missing_ok=True)
 
 
 def main() -> None:
+    variant_names = list(RESUME_VARIANTS)
+    targets = variant_names
+    if len(sys.argv) > 1:
+        requested = sys.argv[1:]
+        unknown = [name for name in requested if name not in RESUME_VARIANTS]
+        if unknown:
+            names = ", ".join(variant_names)
+            raise RuntimeError(f"Unknown variant(s): {', '.join(unknown)}. Available: {names}")
+        targets = requested
+
     chrome = find_chrome()
-    export_pdf(chrome)
-    print(f"Wrote {PDF_FILE.name}")
+    for name in targets:
+        variant = RESUME_VARIANTS[name]
+        html_file = variant["html"]
+        pdf_file = variant["pdf"]
+        if not html_file.is_file():
+            raise RuntimeError(f"Missing HTML source: {html_file.name}")
+        export_pdf(chrome, html_file, pdf_file)
+        print(f"Wrote {pdf_file.name}")
 
 
 if __name__ == "__main__":
