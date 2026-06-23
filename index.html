@@ -3,7 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Keith Weston - User Experience Designer in Austin, TX. Lead Designer, Design System @ Indeed.">
+    <meta name="description" content="Keith Weston — design leader with 15 years in design systems, platform UX, and native mobile. Portfolio across gaming, healthcare, logistics, and HR tech.">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Keith Weston">
+    <meta property="og:title" content="Keith Weston">
+    <meta property="og:description" content="Keith Weston — design leader with 15 years in design systems, platform UX, and native mobile. Portfolio across gaming, healthcare, logistics, and HR tech.">
+    <meta property="og:url" content="https://keiwes.com/">
+    <meta property="og:image" content="https://keiwes.com/images/profile.png">
+    <meta property="og:image:alt" content="Keith Weston">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Keith Weston">
+    <meta name="twitter:description" content="Keith Weston — design leader with 15 years in design systems, platform UX, and native mobile. Portfolio across gaming, healthcare, logistics, and HR tech.">
+    <meta name="twitter:image" content="https://keiwes.com/images/profile.png">
     <title>Keith Weston</title>
     <!-- Prevent flash of white in dark mode -->
     <script>
@@ -25,24 +36,22 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<body>
-    <!-- Hamburger Menu Button (Mobile Only) -->
+<body class="home-page">
     <button class="hamburger-menu" id="hamburgerMenu" aria-label="Toggle menu">
         <span></span>
         <span></span>
         <span></span>
     </button>
 
-    <!-- Mobile Drawer -->
     <div class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
         <nav class="mobile-navigation">
-            <a href="/" class="nav-link" tabindex="-1">Work</a>
+            <a href="#work" class="nav-link" tabindex="-1">Work</a>
             <a href="about.html" class="nav-link" tabindex="-1">About</a>
             <a href="Keith-Weston-Resume.pdf" target="_blank" rel="noopener noreferrer" class="nav-link" tabindex="-1">Resume</a>
             <a href="https://www.linkedin.com/in/keiwes/" target="_blank" rel="noopener noreferrer" class="nav-link" tabindex="-1">LinkedIn</a>
             <a href="mailto:keith@keiwes.com" class="nav-link" tabindex="-1">Email</a>
         </nav>
-        
+
         <button class="toggle-button" id="toggleButton" aria-label="Toggle theme" tabindex="-1">
             <svg class="sun-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <circle cx="12" cy="12" r="5"></circle>
@@ -54,31 +63,28 @@
         </button>
     </div>
 
-    <!-- Drawer Overlay -->
     <div class="drawer-overlay" id="drawerOverlay"></div>
 
     <div class="container">
-        <!-- Left Sidebar -->
         <aside class="sidebar">
             <div class="profile-section">
-            <a href="/" class="profile-home-link">
                 <div class="profile-picture-wrapper">
                     <img src="images/profile.png" alt="Keith Weston" class="profile-picture" id="profilePicture" decoding="async" fetchpriority="high" width="120" height="120">
                 </div>
                 <h1 class="name">Keith Weston</h1>
-            </a>
-                <p class="title">User Experience Designer in Austin, TX</p>
-                <p class="subtitle">Lead Designer, Design System @ Indeed</p>
+                <p class="home-bio">
+                    Design leader with 15 years of experience specializing in design systems, platform UX, and native mobile applications across gaming, healthcare, logistics, and HR tech.
+                </p>
             </div>
-            
+
             <nav class="navigation">
-                <a href="/" class="nav-link">Work</a>
+                <a href="#work" class="nav-link">Work</a>
                 <a href="about.html" class="nav-link">About</a>
                 <a href="Keith-Weston-Resume.pdf" target="_blank" rel="noopener noreferrer" class="nav-link">Resume</a>
                 <a href="https://www.linkedin.com/in/keiwes/" target="_blank" rel="noopener noreferrer" class="nav-link">LinkedIn</a>
                 <a href="mailto:keith@keiwes.com" class="nav-link">Email</a>
             </nav>
-            
+
             <button class="toggle-button toggle-button-desktop" id="toggleButtonDesktop" aria-label="Toggle theme">
                 <svg class="sun-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <circle cx="12" cy="12" r="5"></circle>
@@ -89,66 +95,94 @@
                 </svg>
             </button>
         </aside>
-        
-        <!-- Main Content Area -->
+
         <main class="main-content">
-            <!-- Mobile Profile Section -->
             <div class="mobile-profile-section">
-            <a href="/" class="profile-home-link">
                 <div class="profile-picture-wrapper">
                     <img src="images/profile.png" alt="Keith Weston" class="profile-picture" decoding="async" fetchpriority="high" width="120" height="120">
                 </div>
                 <h1 class="name">Keith Weston</h1>
-            </a>
-                <p class="title">User Experience Designer in Austin, TX</p>
-                <p class="subtitle">Lead Designer, Design System @ Indeed</p>
+                <p class="home-bio">
+                    Design leader with 15 years of experience specializing in design systems, platform UX, and native mobile applications across gaming, healthcare, logistics, and HR tech.
+                </p>
             </div>
 
-            <div class="grid-container" id="work">
-                
-                <a href="indeed.html" class="card-link">
-                    <div class="card card-indeed">
-                        <img src="images/indeed/indeed-header.png" alt="Indeed" class="card-image card-image-blizzard" loading="lazy" decoding="async">
-                        <div class="card-content">
-                            <h3 class="card-title">Indeed</h3>
-                            <p class="card-date">2021 – Present</p>
+            <div class="home-work" id="work">
+                <div class="home-grid">
+
+                    <a href="indeed.html" class="home-tile home-tile--indeed">
+                        <div class="home-tile-media">
+                            <img src="images/indeed/indeed-header.png" alt="Indeed — Lunchbox Design System" loading="lazy" decoding="async">
                         </div>
-                    </div>
-                </a>
-                
-                <a href="blizzard.html" class="card-link">
-                    <div class="card card-blizzard">
-                        <img src="images/blizzard/blizzcon-header.png" alt="Blizzard Entertainment" class="card-image card-image-blizzard" loading="lazy" decoding="async">
-                        <div class="card-content">
-                            <h3 class="card-title">Blizzard Entertainment</h3>
-                            <p class="card-date">2017 – 2021</p>
+                        <div class="home-tile-overlay">
+                            <div class="home-tile-info">
+                                <span class="home-tile-name">Indeed</span>
+                                <div class="home-tile-details">
+                                    <p class="home-tile-meta">
+                                        <span class="home-tile-role">Lead UX Designer, Design System</span><span class="home-tile-meta-sep"> · </span><span class="home-tile-dates">2021 – Present</span>
+                                    </p>
+                                    <p class="home-tile-summary">Shaped and scaled the DS for the world's largest job marketplace.</p>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </a>
-                
-                <a href="uship.html" class="card-link">
-                    <div class="card card-uship">
-                        <img src="images/uship/uship-header.png" alt="uShip" class="card-image" loading="lazy" decoding="async">
-                        <div class="card-content">
-                            <h3 class="card-title">uShip</h3>
-                            <p class="card-date">2016 – 2017</p>
+                    </a>
+
+                    <a href="blizzard.html" class="home-tile home-tile--blizzard">
+                        <div class="home-tile-media">
+                            <img src="images/blizzard/blizzcon-header.png" alt="Blizzard Entertainment — BlizzCon" loading="lazy" decoding="async">
                         </div>
-                    </div>
-                </a>
-                
-                <a href="humana.html" class="card-link">
-                    <div class="card card-humana">
-                        <img src="images/humana/humanavitality-mobile-app-header.png" alt="Humana" class="card-image" loading="lazy" decoding="async">
-                        <div class="card-content">
-                            <h3 class="card-title">Humana</h3>
-                            <p class="card-date">2011 – 2016</p>
+                        <div class="home-tile-overlay">
+                            <div class="home-tile-info">
+                                <span class="home-tile-name">Blizzard<br>Entertainment</span>
+                                <div class="home-tile-details">
+                                    <p class="home-tile-meta">
+                                        <span class="home-tile-role">Lead Web &amp; Senior Mobile UX Designer</span><span class="home-tile-meta-sep"> · </span><span class="home-tile-dates">2017 – 2021</span>
+                                    </p>
+                                    <p class="home-tile-summary">Led web and mobile design for millions of gamers.</p>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </a>
+                    </a>
+
+                    <a href="uship.html" class="home-tile home-tile--uship">
+                        <div class="home-tile-media">
+                            <img src="images/uship/uship-header.png" alt="uShip mobile app" loading="lazy" decoding="async">
+                        </div>
+                        <div class="home-tile-overlay">
+                            <div class="home-tile-info">
+                                <span class="home-tile-name">uShip</span>
+                                <div class="home-tile-details">
+                                    <p class="home-tile-meta">
+                                        <span class="home-tile-role">Senior Mobile UX Designer</span><span class="home-tile-meta-sep"> · </span><span class="home-tile-dates">2016 – 2017</span>
+                                    </p>
+                                    <p class="home-tile-summary">Delivered a mobile app redesign as a solo mobile designer.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="humana.html" class="home-tile home-tile--humana">
+                        <div class="home-tile-media">
+                            <img src="images/humana/humanavitality-mobile-app-header.png" alt="Humana mobile apps" loading="lazy" decoding="async">
+                        </div>
+                        <div class="home-tile-overlay">
+                            <div class="home-tile-info">
+                                <span class="home-tile-name">Humana</span>
+                                <div class="home-tile-details">
+                                    <p class="home-tile-meta">
+                                        <span class="home-tile-role">Lead &amp; Mobile UX Designer</span><span class="home-tile-meta-sep"> · </span><span class="home-tile-dates">2011 – 2016</span>
+                                    </p>
+                                    <p class="home-tile-summary">Led mobile UX for a family of four Humana apps.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                </div>
             </div>
         </main>
     </div>
-    
+
     <script src="script.js"></script>
 </body>
 </html>

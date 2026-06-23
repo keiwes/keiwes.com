@@ -325,30 +325,6 @@ const SmoothScroll = {
 };
 
 // ============================================
-// Card Interactions
-// ============================================
-
-const CardInteractions = {
-    /**
-     * Initialize card click handlers
-     * Note: Cards are wrapped in links, so this is for future extensibility
-     */
-    init() {
-        const cards = document.querySelectorAll('.card');
-        
-        cards.forEach(card => {
-            card.addEventListener('click', () => {
-                const title = card.querySelector('.card-title');
-                if (title) {
-                    // Placeholder for future functionality (analytics, etc.)
-                    console.log('Card clicked:', title.textContent);
-                }
-            });
-        });
-    }
-};
-
-// ============================================
 // Initialization
 // ============================================
 
@@ -365,7 +341,6 @@ function init() {
     ThemeManager.init();
     MobileNavigation.init();
     SmoothScroll.init();
-    CardInteractions.init();
 }
 
 // Start initialization
