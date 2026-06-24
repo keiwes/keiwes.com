@@ -295,6 +295,35 @@ const MobileNavigation = {
 };
 
 // ============================================
+// Profile Home Link
+// ============================================
+
+const ProfileHomeLink = {
+    HOME_HREF: 'index.html',
+
+    /**
+     * Wrap profile picture and name in a home link
+     */
+    init() {
+        document.querySelectorAll('.profile-section, .mobile-profile-section').forEach((section) => {
+            if (section.querySelector('.profile-home-link')) return;
+
+            const pictureWrapper = section.querySelector('.profile-picture-wrapper');
+            const name = section.querySelector('.name');
+            if (!pictureWrapper || !name) return;
+
+            const link = document.createElement('a');
+            link.href = this.HOME_HREF;
+            link.className = 'profile-home-link';
+            link.setAttribute('aria-label', 'Keith Weston — Home');
+
+            section.insertBefore(link, pictureWrapper);
+            link.append(pictureWrapper, name);
+        });
+    }
+};
+
+// ============================================
 // Smooth Scrolling
 // ============================================
 
@@ -325,6 +354,40 @@ const SmoothScroll = {
 };
 
 // ============================================
+// Home Tile Motion
+// ============================================
+
+const HomeTileMotion = {
+    /**
+     * Play a subtle entrance animation on homepage tiles
+     */
+    init() {
+        if (!document.body.classList.contains('home-page')) return;
+
+        const root = document.documentElement;
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            root.classList.remove('home-tiles-pending');
+            return;
+        }
+
+        const tiles = document.querySelectorAll('.home-tile');
+        if (!tiles.length) {
+            root.classList.remove('home-tiles-pending');
+            return;
+        }
+
+        root.classList.remove('home-tiles-pending');
+        document.body.classList.add('home-tiles-animate');
+
+        const lastTile = tiles[tiles.length - 1];
+        lastTile.addEventListener('animationend', (event) => {
+            if (event.animationName !== 'home-tile-enter') return;
+            document.body.classList.remove('home-tiles-animate');
+        }, { once: true });
+    }
+};
+
+// ============================================
 // Initialization
 // ============================================
 
@@ -340,6 +403,8 @@ function init() {
     
     ThemeManager.init();
     MobileNavigation.init();
+    ProfileHomeLink.init();
+    HomeTileMotion.init();
     SmoothScroll.init();
 }
 

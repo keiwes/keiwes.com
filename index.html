@@ -16,7 +16,7 @@
     <meta name="twitter:description" content="Keith Weston — design leader with 15 years in design systems, platform UX, and native mobile. Portfolio across gaming, healthcare, logistics, and HR tech.">
     <meta name="twitter:image" content="https://keiwes.com/images/profile.png">
     <title>Keith Weston</title>
-    <!-- Prevent flash of white in dark mode -->
+    <!-- Prevent flash of white in dark mode; hide tiles until entrance animation runs -->
     <script>
         (function() {
             const savedTheme = localStorage.getItem('theme');
@@ -25,6 +25,10 @@
             if (theme === 'dark') {
                 document.documentElement.classList.add('dark-mode');
                 document.body.classList.add('dark-mode');
+            }
+
+            if (window.matchMedia && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.documentElement.classList.add('home-tiles-pending');
             }
         })();
     </script>

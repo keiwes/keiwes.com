@@ -68,6 +68,10 @@
     --home-grid-pad-bottom: 48px;
     --home-tile-aspect-ratio: 1744 / 1233;
     --home-bio-max-width: 280px;
+    --home-tile-enter-duration: 320ms;
+    --home-tile-enter-stagger: 70ms;
+    --home-tile-enter-offset: 10px;
+    --home-tile-enter-easing: cubic-bezier(0.22, 1, 0.36, 1);
     --color-blizzard-overlay: rgb(7, 98, 197);
     --color-uship-overlay: rgb(47, 106, 149);
     --color-humana-overlay: rgb(78, 111, 39);
@@ -171,10 +175,17 @@ body {
     text-decoration: none;
     color: inherit;
     display: block;
+    cursor: pointer;
 }
 
 .profile-home-link:hover .name {
     color: var(--color-text-secondary);
+}
+
+.profile-home-link:focus-visible {
+    outline: 2px solid var(--color-text-primary);
+    outline-offset: 4px;
+    border-radius: var(--radius-sm);
 }
 
 .profile-picture-wrapper {
@@ -364,6 +375,55 @@ body.home-page .home-tile {
     outline: 1px solid var(--color-background);
     outline-offset: 1px;
     transition: background-color var(--transition-theme), outline-color var(--transition-theme);
+}
+
+/* Home tile entrance */
+html.home-tiles-pending body.home-page .home-tile {
+    opacity: 0;
+}
+
+body.home-page.home-tiles-animate .home-tile {
+    animation: home-tile-enter var(--home-tile-enter-duration) var(--home-tile-enter-easing) both;
+}
+
+body.home-page.home-tiles-animate .home-tile:nth-child(1) {
+    animation-delay: 0ms;
+}
+
+body.home-page.home-tiles-animate .home-tile:nth-child(2) {
+    animation-delay: var(--home-tile-enter-stagger);
+}
+
+body.home-page.home-tiles-animate .home-tile:nth-child(3) {
+    animation-delay: calc(var(--home-tile-enter-stagger) * 2);
+}
+
+body.home-page.home-tiles-animate .home-tile:nth-child(4) {
+    animation-delay: calc(var(--home-tile-enter-stagger) * 3);
+}
+
+@keyframes home-tile-enter {
+    from {
+        opacity: 0;
+        transform: translateY(var(--home-tile-enter-offset));
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html.home-tiles-pending body.home-page .home-tile {
+        opacity: 1;
+    }
+
+    body.home-page.home-tiles-animate .home-tile {
+        animation: none;
+        opacity: 1;
+        transform: none;
+    }
 }
 
 body.home-page .home-tile-media {
