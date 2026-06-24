@@ -299,7 +299,7 @@ const MobileNavigation = {
 // ============================================
 
 const ProfileHomeLink = {
-    HOME_HREF: 'index.html',
+    HOME_HREF: '/',
 
     /**
      * Wrap profile picture and name in a home link
