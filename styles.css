@@ -59,6 +59,7 @@
     --sidebar-width: 380px;
     --sidebar-width-md: 340px;
     --max-width-content: 800px;
+    --image-breakout-max: 100px;
 
     /* Home page */
     --home-main-overlap: 20px;
@@ -67,6 +68,7 @@
     --home-grid-pad: 10px;
     --home-grid-pad-bottom: 48px;
     --home-tile-aspect-ratio: 1744 / 1233;
+    --home-tile-aspect-ratio-mobile: 1744 / 1500;
     --home-bio-max-width: 280px;
     --home-tile-enter-duration: 320ms;
     --home-tile-enter-stagger: 70ms;
@@ -679,12 +681,33 @@ body.home-page .home-tile-summary {
     }
 
     body.home-page .home-tile {
-        aspect-ratio: var(--home-tile-aspect-ratio);
+        display: grid;
+        grid-template-rows: 1fr auto;
+        aspect-ratio: var(--home-tile-aspect-ratio-mobile);
         width: 100%;
         height: auto;
     }
 
+    body.home-page .home-tile-media {
+        position: relative;
+        inset: auto;
+        align-items: flex-start;
+        min-height: 0;
+    }
+
+    body.home-page:not(.dark-mode) .home-tile--indeed .home-tile-media {
+        padding-inline: 0;
+    }
+
+    body.home-page .home-tile-media img {
+        object-fit: cover;
+        object-position: top center;
+        transform-origin: top center;
+    }
+
     body.home-page .home-tile-overlay {
+        position: relative;
+        inset: auto;
         --tile-overlay-pad-x: 14px;
     }
 
@@ -862,14 +885,16 @@ body.dark-mode .mobile-drawer {
     margin-bottom: var(--spacing-xl);
 }
 
-.about-link {
+.about-link,
+.project-back-link {
     color: var(--color-text-secondary);
     text-decoration: underline;
     text-underline-offset: 3px;
     transition: color var(--transition-fast);
 }
 
-.about-link:hover {
+.about-link:hover,
+.project-back-link:hover {
     color: var(--color-text-primary);
 }
 
@@ -905,6 +930,12 @@ body.dark-mode .mobile-drawer {
     max-width: var(--max-width-content);
     margin: 0 auto;
     padding: var(--spacing-3xl) 0;
+}
+
+body:not(.home-page) {
+    /* Used by .project-image-breakout to scale bleed with available main-content width */
+    --content-area-padding: var(--spacing-3xl);
+    --content-area-sidebar: var(--sidebar-width);
 }
 
 .project-hero {
@@ -993,6 +1024,7 @@ body.dark-mode .mobile-drawer {
 
 .project-content {
     line-height: var(--line-height-loose);
+    overflow: visible;
 }
 
 .project-subtitle {
@@ -1011,6 +1043,17 @@ body.dark-mode .mobile-drawer {
 
 .project-paragraph:has(.project-link) {
     margin-bottom: var(--spacing-sm);
+}
+
+.project-paragraph.project-callout,
+.project-paragraph.project-result {
+    margin-bottom: var(--spacing-sm);
+}
+
+.project-paragraph.project-callout strong,
+.project-paragraph.project-result strong {
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text-primary);
 }
 
 .project-link {
@@ -1166,6 +1209,15 @@ body.dark-mode .mobile-drawer {
     margin-bottom: 48px !important;
 }
 
+.project-image-breakout {
+    --breakout-room: max(0px, (100vw - var(--content-area-sidebar) - 2 * var(--content-area-padding) - var(--max-width-content)) / 2);
+    --breakout: min(var(--image-breakout-max), var(--breakout-room));
+    width: calc(100% + 2 * var(--breakout));
+    max-width: none;
+    margin-left: calc(-1 * var(--breakout));
+    margin-right: calc(-1 * var(--breakout));
+}
+
 .project-image-label {
     font-size: var(--font-size-body-sm);
     color: var(--color-text-tertiary);
@@ -1319,6 +1371,11 @@ body.dark-mode html {
         width: calc(100% - var(--sidebar-width-md));
         display: block;
     }
+
+    body:not(.home-page) {
+        --content-area-padding: 30px;
+        --content-area-sidebar: var(--sidebar-width-md);
+    }
 }
 
 /* Mobile */
@@ -1386,6 +1443,11 @@ body.dark-mode html {
         height: auto;
         position: relative;
         z-index: 1;
+    }
+
+    body:not(.home-page) {
+        --content-area-padding: var(--spacing-xl);
+        --content-area-sidebar: 0px;
     }
     
     /* About page mobile */
